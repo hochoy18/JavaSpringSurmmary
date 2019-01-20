@@ -53,7 +53,7 @@ public class VerifyLicense {
 			licenseManager.install(new File(licPath));
 			System.out.println("License file instal successfully!");				
 		} catch (Exception e) {
-			//e.printStackTrace();			
+			e.printStackTrace();
 			String moreInfo ="License file instal failure";
 			System.out.println(moreInfo);
 			throw e;

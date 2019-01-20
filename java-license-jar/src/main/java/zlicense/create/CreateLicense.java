@@ -51,7 +51,7 @@ public class CreateLicense {
 	
 	
 	private final static X500Principal DEFAULTHOLDERANDISSUER = new X500Principal(
-			"CN=Duke、OU=JavaSoft、O=Sun Microsystems、C=US");
+			"CN=RIC, OU=Client, O=CBC, L=SH, ST=SH, C=zh");
 	
 	public void setParam(String propertiesPath) {
 		//

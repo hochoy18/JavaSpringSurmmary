@@ -10,12 +10,20 @@ import static java.lang.System.out;
 public class ListNets {
 
 	public static void main(String args[]) throws SocketException {	
-		String ip = "150.236.220.200";
-		String mac = "80-00-0B-56-3B-32";
-		boolean flag = validatoIpAndMacAddress(ip, mac);
-		boolean macflag = validateMacAddress( mac);
-		out.printf("validatoMacAddress flag=%s\n", macflag);
-		out.printf("validatoIpAndMacAddress flag=%s\n", flag);		
+//		String ip = "192.168.1.70";
+//		String mac = "20-47-47-0B-33-00";
+//		boolean flag = validatoIpAndMacAddress(ip, mac);
+//		boolean macflag = validateMacAddress( mac);
+//		out.printf("validatoMacAddress flag=%s\n", macflag);
+//		out.printf("validatoIpAndMacAddress flag=%s\n", flag);
+
+		Enumeration<NetworkInterface> nets = NetworkInterface
+				.getNetworkInterfaces();
+		while (nets.hasMoreElements()){
+
+			displayInterfaceInformation(nets.nextElement());
+			out.println("--------------------------------------------------------");
+		}
 	}
 
 	static void displayInterfaceInformation(NetworkInterface netint)
